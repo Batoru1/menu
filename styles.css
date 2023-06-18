@@ -17,13 +17,13 @@ h2 {
 .photo {
   height: 12em;
 }
-
+/* to move title and btns to center */
 .menu {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+/* to move item-info right of  img */
 .menu-item {
   display: flex;
   gap: 1rem;
