@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: rgb(234, 228, 228);
 }
 
 h4 {
@@ -15,7 +16,8 @@ h2 {
 }
 
 .photo {
-  height: 12em;
+  width: 150px;
+  height: auto;
 }
 /* to move title and btns to center */
 .menu {
@@ -27,4 +29,34 @@ h2 {
 .menu-item {
   display: flex;
   gap: 1rem;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  left: 25%; /*to center the line*/
+  bottom: 0.5em; /* Adjust the distance of the line from the text */
+  width: 50%; /* Adjust the length of the line */
+  height: 0.25em; /* Adjust the thickness of the line */
+  background-color: rgb(169, 115, 169);
+}
+
+.title {
+  margin-top: 2em;
+}
+
+.btn-container {
+  margin-top: 1.5em;
+  margin-bottom: 3em;
+}
+
+.filter-btn {
+  border: 0.2em solid rgb(169, 115, 169); /*thickness style and color*/
+  border-radius: 0.5em; /*rounded corners*/
+  background-color: transparent;
+  box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2); /* horizontal offset, vertical offset, blur radius,shadow color and opacity */
 }
