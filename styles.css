@@ -8,16 +8,22 @@ body {
 h4 {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.1em;
+  color: rgb(115, 115, 233);
+  text-transform: capitalize;
 }
 
 h2 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  color: rgb(115, 115, 233);
 }
 
 .photo {
   width: 150px;
   height: auto;
+  border: 0.3em solid rgb(169, 115, 169);
+  border-radius: 0.5em;
+  box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2);
 }
 /* to move title and btns to center */
 .menu {
@@ -59,4 +65,19 @@ h2 {
   border-radius: 0.5em; /*rounded corners*/
   background-color: transparent;
   box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2); /* horizontal offset, vertical offset, blur radius,shadow color and opacity */
+}
+
+.filter-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(169, 115, 169);
+}
+
+.price {
+  color: rgb(169, 115, 169);
+}
+
+.item-text {
+  opacity: 0.5;
+  color: rgb(32, 32, 95);
 }
