@@ -65,6 +65,9 @@ h2 {
   border-radius: 0.5em; /*rounded corners*/
   background-color: transparent;
   box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2); /* horizontal offset, vertical offset, blur radius,shadow color and opacity */
+  text-transform: capitalize;
+  font-size: larger;
+  color: rgb(169, 115, 169);
 }
 
 .filter-btn:hover {
