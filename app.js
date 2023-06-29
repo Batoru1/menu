@@ -2,7 +2,6 @@
 //iterate over categories return buttons
 //make sure to select buttons when they are available
 
-//items
 const menu = [
   {
     id: 1,
@@ -85,6 +84,18 @@ const menu = [
     desc: `Macaroon macaroon croissant caramels wafer pastry dessert soufflé. Wafer oat cake sugar plum bear claw cookie topping.`,
   },
 ];
-//load itms
 
-//filter items
+//get parent element
+const sectionCenter = document.querySelector('.setion-center');
+const btnContainer = document.querySelector('.btn-container');
+//display all items when page  loads
+window.addEventListener('DOMContentLoaded', function () {
+  displayMenuItems(menu);
+  displayMenuButtons();
+});
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    console.log(item);
+  });
+}
