@@ -1,4 +1,5 @@
 # menu
+
 menu page interactive
 
 item-1 Photo by Valeria Boltneva: https://www.pexels.com/photo/ham-burger-with-vegetables-1639557/
@@ -20,3 +21,30 @@ item-8 Photo by Desativado: https://www.pexels.com/photo/selective-focus-photogr
 item-9 Photo by Genaro Servín: https://www.pexels.com/photo/strawberry-smoothie-on-a-clear-glass-2424832/
 
 item-10 Photo by İbrahim Hakkı Uçman: https://www.pexels.com/photo/strawberry-smoothie-on-a-wine-glass-3342301/
+
+description:
+
+DISPLAYING MENU ITEMS
+make a menu array (const menu)
+
+select dish description and buttons (.section-center and btn-container)
+
+create DOMContentLoaded event to - access and manipulate HTML elements, attach event listeners, perform DOM operations, and more.
+By using the DOMContentLoaded event, you ensure that your JavaScript code runs only after the HTML document has been fully loaded, preventing potential issues where elements you want to interact with are not yet available.
+
+use .map method so that all the items from the array(menu) could be added dynamically (possibly more in the future) as a string.
+
+use .join method to make a single string out of manu items called by .map while using a sparator ('') of empty string, to avois the commas (,) inbetween the strings elements.
+
+use innerHTML property to insert menu items onto the pages sectionCenter element.
+
+MAKING BUTTONS FUNCTIONAL
+use .reduce() method to iterate over menu array and create an array of uneque categories(names) to find all the possible button categories(names), the accumulator value of .reduce() is ['all'] so that the all button is always present
+
+.push() method to add new categories at the end of the array
+
+.map() is used
+
+.join()
+
+innerHTML property methods to display button categories in HTML

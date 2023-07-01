@@ -45,8 +45,8 @@ const menu = [
   },
   {
     id: 6,
-    title: 'breakfast',
-    category: 'rising ceaser',
+    title: 'rising ceaser',
+    category: 'breakfast',
     price: 7.69,
     img: './images/item-6.jpg',
     desc: `Consectetur libero id faucibus nisl tincidunt eget nullam. Molestie at elementum eu facilisis sed odio morbi. Convallis posuere morbi leo`,
@@ -115,6 +115,33 @@ function displayMenuItems(menu) {
   sectionCenter.innerHTML = displayMenu;
 }
 
-function displayMenuButtons(){
-  const categories=
+function displayMenuButtons() {
+  const categories = menu.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ['all'] //adds all btn
+  );
+  const categoryBtns = categories
+    .map(function (category) {
+      return ` <button class="filter-btn" type="button" data-id=${category}>${category}</button>`;
+    })
+    .join('');
+
+  btnContainer.innerHTML = categoryBtns; //adds dinner btn
+
+  const filterBtns = btnContainer.querySelectorAll('.filter-btn');
+  // console.log(filterBtns);
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      console.log(e.currentTarget.dataset);
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter(function (menuItem) {
+        console.log(menuItem.category);
+      });
+    });
+  });
 }
