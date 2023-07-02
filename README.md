@@ -43,8 +43,20 @@ use .reduce() method to iterate over menu array and create an array of uneque ca
 
 .push() method to add new categories at the end of the array
 
-.map() is used
+.map() method maps over uneque categories array and creates HTML buttons for each category
 
-.join()
+.join() method joins the generated buttons into a single string
 
-innerHTML property methods to display button categories in HTML
+innerHTML property displays button categories(names) in HTML
+
+select all the filter buttons, return NodeList with all the 'filter-btn' const filterBtns = btnContainer.querySelectorAll('.filter-btn') and assign them to filterBtns variables
+
+.forEach method executes the callback function for each element in the NodeList
+
+.currentTarget property is a reference to the element on which the event listener is attached
+
+.dataset property retrieves the value of the data-id attribute from the button that was clicked
+
+.filter filters .menu array and creates new array menuCategory which includes only category properties which match the selected category
+
+if the category matches the button pushed then it is displayed, if all button is pushed then the whole menu is displayed

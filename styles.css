@@ -19,12 +19,14 @@ h2 {
 }
 
 .photo {
-  width: 150px;
+  width: 250px;
   height: auto;
   border: 0.3em solid rgb(169, 115, 169);
   border-radius: 0.5em;
   box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2);
+  object-fit: cover;
 }
+
 /* to move title and btns to center */
 .menu {
   display: flex;

@@ -80,7 +80,7 @@ const menu = [
     title: 'strawberry punch-shake',
     category: 'shakes',
     price: 3.99,
-    img: './images/item-1.jpg',
+    img: './images/item-10.jpg',
     desc: `Macaroon macaroon croissant caramels wafer pastry dessert soufflé. Wafer oat cake sugar plum bear claw cookie topping.`,
   },
 ];
@@ -112,7 +112,7 @@ function displayMenuItems(menu) {
   });
   displayMenu = displayMenu.join('');
   // console.log(displayMenu);
-  sectionCenter.innerHTML = displayMenu;
+  sectionCenter.innerHTML = displayMenu; //adds menu items, may add additional ones
 }
 
 function displayMenuButtons() {
@@ -137,11 +137,19 @@ function displayMenuButtons() {
   // console.log(filterBtns);
   filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
-      console.log(e.currentTarget.dataset);
+      // console.log(e.currentTarget.dataset);
       const category = e.currentTarget.dataset.id;
       const menuCategory = menu.filter(function (menuItem) {
-        console.log(menuItem.category);
+        // console.log(menuItem.category);
+        if (menuItem.category === category) {
+          return menuItem;
+        }
       });
+      if (category === 'all') {
+        displayMenuItems(menu);
+      } else {
+        displayMenuItems(menuCategory);
+      }
     });
   });
 }
