@@ -19,12 +19,36 @@ h2 {
 }
 
 .photo {
-  width: 250px;
-  height: auto;
   border: 0.3em solid rgb(169, 115, 169);
   border-radius: 0.5em;
   box-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, 0.2);
-  object-fit: cover;
+  object-fit: cover; /*so pictures dont loose img quality*/
+  /* margin-top: 4vh; */
+}
+
+/* Styles for full-size layout */
+.section-center {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .section-center {
+    grid-template-columns: 1fr;
+  }
+  .photo {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .photo {
+    width: 250px;
+    height: 200px;
+  }
 }
 
 /* to move title and btns to center */
@@ -37,6 +61,12 @@ h2 {
 .menu-item {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.item-text {
+  opacity: 0.5;
+  color: rgb(32, 32, 95);
 }
 
 .underline {
@@ -80,9 +110,4 @@ h2 {
 
 .price {
   color: rgb(169, 115, 169);
-}
-
-.item-text {
-  opacity: 0.5;
-  color: rgb(32, 32, 95);
 }
