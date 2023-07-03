@@ -61,7 +61,7 @@ h2 {
 @media (max-width: 480px) {
   .filter-btn {
     font-size: xx-small; /* Adjust the font size for smaller screens */
-    padding: 0.5em 1em; /* Adjust the padding for smaller screens */
+    padding: 0.1em 0.2em; /* Adjust the padding for smaller screens */
   }
 }
 
