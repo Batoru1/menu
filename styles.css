@@ -58,6 +58,12 @@ h2 {
     height: 200px;
   }
 }
+@media (max-width: 480px) {
+  .filter-btn {
+    font-size: smaller; /* Adjust the font size for smaller screens */
+    padding: 0.5em 1em; /* Adjust the padding for smaller screens */
+  }
+}
 
 /* to move title and btns to center */
 .menu {
