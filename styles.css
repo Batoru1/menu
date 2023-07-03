@@ -31,6 +31,8 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
+  margin-right: 20rem;
+  margin-left: 20rem;
 }
 
 /* Styles for smaller screens */
